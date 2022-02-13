@@ -1,0 +1,15 @@
+{
+    "name":"SPFx Patron",
+    "version":"1.0",
+    "manifest_version":2, 
+    "default_locale": "en",
+    "description": "This extension reloads browser pages with local debug url for SPFx webparts",
+    "browser_action":{
+        "default_title":"SPFx local debugger",
+        "default_popup":"popup.html",
+        "default_icon":"parker-spfx.png"
+    },
+    "permissions":["<all_urls>","tabs",  "activeTab"],   
+    "author":"Praveen Kanamarlapudi"
+    
+}
