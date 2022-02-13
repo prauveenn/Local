@@ -1,0 +1,10 @@
+{
+    "appName": {
+      "message": "SPFx Patron",
+      "description": "SharePoint Framework Extension"
+    },
+    "appDesc": {
+      "message": "This extension reloads browser pages with local debug url for SPFx webparts",
+      "description": "SharePoint Framework Extension"
+    }
+  }
