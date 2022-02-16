@@ -8,12 +8,16 @@
     }
     window.hasRun = true;
 
-
     document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById("port").defaultValue = "4321";
+        if (localStorage["spfxPatronPortNumber"] == undefined || localStorage["spfxPatronPortNumber"] == '')
+            document.getElementById("port").defaultValue = "4321";
+        else
+            document.getElementById("port").defaultValue = localStorage["spfxPatronPortNumber"];
         var reloadButton = document.getElementById('btnReload');
         reloadButton.addEventListener('click', function () {
+            document.getElementById("port").defaultValue = localStorage["spfxPatronPortNumber"];
             let portNumber = document.getElementById("port").value;
+            localStorage["spfxPatronPortNumber"] = portNumber;
             chrome.tabs.query({
                 active: true,
                 currentWindow: true
@@ -43,3 +47,8 @@
         }, false);
     }, false);
 })();
+/**
+ * @ SPFx Patron v2.0
+ * https://github.com/prauveenn/SPFx-Patron/blob/master/README.md
+ * (c) 2022 Praveen Kanamarlapudi
+ */
